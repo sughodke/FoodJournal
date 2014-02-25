@@ -1,0 +1,51 @@
+.journalbox {
+	border:none;
+	max-width:600px;
+	_width:600px;
+	background-image:url(imgs/background.png);
+	background-repeat:repeat-y;
+}
+.journalbox ul {
+	display:none;
+}
+.journalbox .journaltext {
+	margin-left:60px;
+	margin-top:39px;
+	_margin-left:60px;
+	_margin-top:32px;
+	font-family:'Marker Felt' 'verdana';
+	font-size:14px;
+	line-height:18.3pt;
+	color:#3a2f27;
+}
+.journaltop {
+	background-image:url(imgs/header.png);
+	height:120px;
+	background-repeat:no-repeat;
+	font-size:0px;
+	background-color:transparent;
+	color:#f3d971;
+}
+.journaltop img {
+	display:none;
+}
+.journaltop h2 {
+	font-family:'Marker felt' 'Verdana';
+	font-size:24px;
+	color:#3a2f27;
+	text-align:center;
+	padding-top:120px;
+}
+.journalbottom {
+	padding-top:13px;
+	background-image:url(imgs/footer.png);
+	background-repeat:no-repeat;
+	height:87px;
+	_height:108px;
+	color:#3a2f27;
+}
+.journalbottom a {
+	color:#3a2f27;
+	text-decoration:none;
+	font-family:'Marker Felt' 'Verdana';
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Food Journal</title>
+  <link rel="stylesheet" href="todos.css"/>
+</head>
+
+<body>
+<a href="https://github.com/sughodke/FoodJournal"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+  <div id="todoapp">
+
+    <header>
+      <h1>Food Journal</h1>
+      <!--
+      <input id="new-todo" type="text" placeholder="What did you have to eat today?">
+       (OJ 2x 100)
+      -->
+      <div contenteditable="true" id="new-todo" class="placeholder">
+        What did you have to eat today?
+      </div>
+      
+    </header>
+
+    <section id="main">
+      <input id="toggle-all" type="checkbox">
+      <label for="toggle-all">Mark all as complete</label>
+      <a id="clear-completed">Clear completed</a>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <footer>
+      <a id="clear-completed">Clear completed</a>
+      <div id="todo-count"></div>
+    </footer>
+
+  </div>
+
+  <div id="instructions">
+    Double-click to edit a todo.
+  </div>
+
+  <div id="credits">
+    Created by
+    <br />
+    Sid Ghodke.
+    <br />
+  </div>
+
+  <script src="contrib/jquery.js"></script>
+  <script src="contrib/underscore.js"></script>
+  <script src="contrib/underscore.string.min.js"></script>
+  <script src="contrib/backbone.js"></script>
+  <script src="contrib/backbone.localStorage-min.js"></script>
+  <script src="todos.js"></script>
+
+  <!-- Templates -->
+  <script type="text/template" id="item-template">
+    <div class="view">
+      <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+      <label><%- food %></label>
+      <div class="item-stats">
+        <span class="count"><%- count %></span>
+        <span class="calories"><%- cal %></span>
+      </div>
+      <a class="destroy"></a>
+    </div>
+    <input class="edit" type="text" value="<%- title %>" />
+  </script>
+
+<!-- 
+  <script type="text/template" id="stats-template">
+    <% if (done) { %>
+      <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+    <% } %>
+    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+  </script>
+-->
+  <script type="text/template" id="stats-template">
+    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %>
+        <span class="cal-count"> <%= total %> cal</span>
+    </div>
+  </script>
+
+  </body>
+</html>
